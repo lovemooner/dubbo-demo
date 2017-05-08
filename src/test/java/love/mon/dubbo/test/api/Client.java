@@ -1,17 +1,13 @@
-package love.mon.dubbo.test;
+package love.mon.dubbo.test.api;
 
 
 import com.alibaba.dubbo.config.ApplicationConfig;
-import com.alibaba.dubbo.config.MethodConfig;
 import com.alibaba.dubbo.config.ReferenceConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
 import love.moon.dubbo.demo.service.DemoService;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static love.mon.dubbo.test.Server.REGISTRY_ADDRESS;
-import static love.mon.dubbo.test.Server.VERSION;
+import static love.mon.dubbo.test.api.Server.REGISTRY_ADDRESS;
+import static love.mon.dubbo.test.api.Server.VERSION;
 
 /**
  * Author: lovemooner
@@ -37,6 +33,7 @@ public class Client {
 
 // 和本地bean一样使用xxxService
         DemoService demoService = reference.get(); // 注意：此代理对象内部封装了所有通讯细节，对象较重，请缓存复用
+        System.out.println(demoService.getClass().getDeclaredMethods());
         String result= demoService.sayHello("Moon");
         System.out.println(result);
     }
