@@ -1,4 +1,4 @@
-package love.mon.dubbo.test.api;
+package love.moon.dubbo.demo.api;
 
 import com.alibaba.dubbo.config.*;
 import love.moon.dubbo.demo.service.DemoService;

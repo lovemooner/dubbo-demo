@@ -1,4 +1,4 @@
-package love.moon.dubbo.demo.client;
+package love.moon.dubbo.demo;
 
 import love.moon.dubbo.demo.service.DemoService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
