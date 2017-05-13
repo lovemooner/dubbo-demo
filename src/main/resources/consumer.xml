@@ -14,7 +14,7 @@
 
     <dubbo:application name="dubbo_consumer"></dubbo:application>
     <!-- 使用zookeeper注册中心暴露服务地址 -->
-    <dubbo:registry address="zookeeper://slc11fsp.us.oracle.com:2181" check="false"></dubbo:registry>
+    <dubbo:registry address="zookeeper://localhost:2181" check="false"></dubbo:registry>
     <!-- 要引用的服务 -->
     <dubbo:reference interface="love.moon.dubbo.demo.service.DemoService"
                      id="demoServiceImpl"></dubbo:reference>
