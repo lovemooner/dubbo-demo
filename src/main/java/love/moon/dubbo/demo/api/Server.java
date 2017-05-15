@@ -13,13 +13,14 @@ import java.io.IOException;
 public class Server {
 
     public static final String REGISTRY_ADDRESS="zookeeper://slc11fsp.us.oracle.com:2181";
+    public final static String APP_NAME="dubbo-demo";
     public static final String VERSION="1.0.1";
 
     public  static void start() {
         DemoService demoService = new DemoServiceImpl();
         // 当前应用配置
         ApplicationConfig application = new ApplicationConfig();
-        application.setName("dubbo-demo");
+        application.setName(APP_NAME);
 
         // 连接注册中心配置
         RegistryConfig registry = new RegistryConfig();
